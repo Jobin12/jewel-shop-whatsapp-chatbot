@@ -146,7 +146,7 @@ def handle_openai_conversation(wa_id, name, user_message, send_message_callback)
         description="Fetch image URLs for a specific jewellery item ID and signal that images should be sent.",
     )
 
-    llm = ChatOpenAI(model="gpt-4.1-nano", api_key=api_key, max_retries=1)
+    llm = ChatOpenAI(model="gpt-5-nano", api_key=api_key, max_retries=1)
     tools = [search_jewellery, get_jewellery_details, send_jewellery_images]
 
     graph = create_agent(
